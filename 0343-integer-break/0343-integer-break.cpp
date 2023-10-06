@@ -1,3 +1,6 @@
+
+*******************************DP Approach********************************************
+    
 class Solution {
 public:
     int dp[59];
@@ -20,3 +23,27 @@ public:
         
     }
 };
+
+Time Complexity: O(n^2)
+Space Complexity: O(n) 
+
+    ***********************************Greedy Approach:***************************************
+    
+class Solution {
+public:
+    int integerBreak(int n) {
+        if (n <= 3) {
+            return n - 1;
+        }
+        int result = 1;
+        while (n > 4) {
+            result *= 3;
+            n -= 3;
+        }
+        result *= n;
+        return result;
+    }
+};
+
+Time Complexity: O(1)
+Space Complexity: O(1)
