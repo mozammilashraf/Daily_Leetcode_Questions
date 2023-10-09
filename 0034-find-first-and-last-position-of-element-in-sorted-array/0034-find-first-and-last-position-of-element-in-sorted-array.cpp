@@ -16,7 +16,7 @@ public:
     }
     vector<int> searchRange(vector<int>& nums, int target) {
         int n=nums.size();
-        // if(n==0) return {-1,-1};
+        if(n==0) return {-1,-1};
         int right=binSearch(target,nums);
         if(right==-1 || nums[right]!=target)
             return {-1,-1};
