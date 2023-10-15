@@ -23,7 +23,7 @@ public:
     }
 
     int numWays(int steps, int arrLen) {
-        arrLen = min( arrLen, steps);
+        arrLen = min( arrLen, steps/2 +1);
         n =arrLen;
         memset(dp,-1,sizeof(dp));
         return solve(0,steps);
