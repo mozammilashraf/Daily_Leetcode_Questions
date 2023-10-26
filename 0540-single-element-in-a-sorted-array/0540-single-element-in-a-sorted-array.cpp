@@ -14,10 +14,9 @@ public:
             if((mid%2==0 && nums[mid]==nums[mid+1] )|| (mid%2==1 && nums[mid]== nums[mid-1])){
                 s= mid+1;
             }
-            if((mid%2==0 && nums[mid]== nums[mid-1]) || (mid%2 ==1 &&  nums[mid]==nums[mid+1])){
+            else{
                 e= mid-1;
-            }
-            
+            }          
         }
      return nums[mid];   
     }
